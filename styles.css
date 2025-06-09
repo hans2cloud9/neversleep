@@ -473,15 +473,15 @@ p, div, span {
   color: #ffeb3b !important;
 }
 
-/* ========== 네비게이션 드롭다운 완전 개선 ========== */
+/* ========== 네비게이션 드롭다운 자연스러운 개선 ========== */
 
-/* 드롭다운 컨테이너 */
+/* 드롭다운 컨테이너 - 반투명 어두운 배경으로 변경 */
 .navbar-dropdown,
 .dropdown-menu {
-  background-color: #ffffff !important;
-  border: 1px solid #e0e0e0 !important;
+  background-color: rgba(0, 0, 0, 0.9) !important; /* 반투명 검정 */
+  border: 1px solid #333333 !important;
   border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
   backdrop-filter: blur(10px);
   padding: 8px 0 !important;
 }
@@ -489,7 +489,7 @@ p, div, span {
 /* 드롭다운 아이템 기본 스타일 */
 .navbar-dropdown .navbar-item,
 .dropdown-item {
-  color: #333333 !important;
+  color: #ffffff !important; /* 흰색 텍스트 */
   padding: 12px 20px !important;
   transition: all 0.2s ease !important;
   border-radius: 6px !important;
@@ -497,15 +497,38 @@ p, div, span {
   font-weight: 500 !important;
 }
 
-/* 드롭다운 아이템 호버 효과 */
+/* 드롭다운 호버 - 그라데이션 파란색 */
 .navbar-dropdown .navbar-item:hover,
 .dropdown-item:hover {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
+  background: linear-gradient(135deg, #167aff 0%, #0d5dd1 100%) !important;
   color: #ffffff !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-  border-left: 3px solid var(--navbar-btn-bg-color) !important;
+  box-shadow: 0 4px 12px rgba(22, 122, 255, 0.4) !important;
   text-decoration: none !important;
+}
+
+/* 드롭다운 애니메이션 효과 */
+.navbar-dropdown,
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid #333333 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(10px);
+  padding: 8px 0 !important;
+  
+  /* 애니메이션 추가 */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdownFadeIn 0.2s ease forwards;
+}
+
+/* 드롭다운 페이드인 애니메이션 */
+@keyframes dropdownFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 모바일 최적화 */
