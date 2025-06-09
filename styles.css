@@ -473,33 +473,45 @@ p, div, span {
   color: #ffeb3b !important;
 }
 
-/* ========== 네비게이션 드롭다운 자연스러운 개선 ========== */
+/* ========== Bullet 전용 드롭다운 완벽 해결 ========== */
 
-/* 드롭다운 컨테이너 - 반투명 어두운 배경으로 변경 */
-.navbar-dropdown,
-.dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.9) !important; /* 반투명 검정 */
+/* Bullet 네비게이션 드롭다운 컨테이너 */
+.bullet-navbar [class*="dropdown"],
+.bullet-navbar [class*="menu"],
+nav.bullet-navbar ul,
+.navbar.bullet-navbar [class*="dropdown"] {
+  background-color: rgba(0, 0, 0, 0.9) !important;
   border: 1px solid #333333 !important;
   border-radius: 8px !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px) !important;
   padding: 8px 0 !important;
 }
 
-/* 드롭다운 아이템 기본 스타일 */
-.navbar-dropdown .navbar-item,
-.dropdown-item {
-  color: #ffffff !important; /* 흰색 텍스트 */
+/* Bullet 드롭다운 아이템 */
+.bullet-navbar [class*="dropdown"] a,
+.bullet-navbar [class*="menu"] a,
+.bullet-navbar [class*="dropdown"] [class*="item"],
+.bullet-navbar [class*="menu"] [class*="item"],
+nav.bullet-navbar ul li a,
+.navbar.bullet-navbar [class*="dropdown"] a {
+  color: #ffffff !important;
   padding: 12px 20px !important;
+  display: block !important;
+  text-decoration: none !important;
   transition: all 0.2s ease !important;
   border-radius: 6px !important;
   margin: 4px 8px !important;
   font-weight: 500 !important;
 }
 
-/* 드롭다운 호버 - 그라데이션 파란색 */
-.navbar-dropdown .navbar-item:hover,
-.dropdown-item:hover {
+/* Bullet 드롭다운 호버 효과 - 파란색 */
+.bullet-navbar [class*="dropdown"] a:hover,
+.bullet-navbar [class*="menu"] a:hover,
+.bullet-navbar [class*="dropdown"] [class*="item"]:hover,
+.bullet-navbar [class*="menu"] [class*="item"]:hover,
+nav.bullet-navbar ul li a:hover,
+.navbar.bullet-navbar [class*="dropdown"] a:hover {
   background: linear-gradient(135deg, #167aff 0%, #0d5dd1 100%) !important;
   color: #ffffff !important;
   transform: translateY(-1px) !important;
@@ -507,42 +519,32 @@ p, div, span {
   text-decoration: none !important;
 }
 
-/* 드롭다운 애니메이션 효과 */
-.navbar-dropdown,
-.dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  border: 1px solid #333333 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(10px);
-  padding: 8px 0 !important;
-  
-  /* 애니메이션 추가 */
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: dropdownFadeIn 0.2s ease forwards;
-}
-
-/* 드롭다운 페이드인 애니메이션 */
-@keyframes dropdownFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* 모바일 최적화 */
 @media (max-width: 768px) {
-  .navbar-dropdown,
-  .dropdown-menu {
+  .bullet-navbar [class*="dropdown"],
+  .bullet-navbar [class*="menu"],
+  nav.bullet-navbar ul {
     border-radius: 0 !important;
     width: 100% !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6) !important;
   }
   
-  .navbar-dropdown .navbar-item,
-  .dropdown-item {
+  .bullet-navbar [class*="dropdown"] a,
+  .bullet-navbar [class*="menu"] a,
+  .bullet-navbar [class*="dropdown"] [class*="item"],
+  .bullet-navbar [class*="menu"] [class*="item"],
+  nav.bullet-navbar ul li a {
     padding: 15px 20px !important;
     font-size: 1.1rem !important;
+  }
+  
+  .bullet-navbar [class*="dropdown"] a:hover,
+  .bullet-navbar [class*="menu"] a:hover,
+  .bullet-navbar [class*="dropdown"] [class*="item"]:hover,
+  .bullet-navbar [class*="menu"] [class*="item"]:hover,
+  nav.bullet-navbar ul li a:hover {
+    background-color: #167aff !important;
+    box-shadow: none !important;
   }
 }
 
