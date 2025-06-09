@@ -404,3 +404,117 @@ hr {
     padding: .5rem;
   }
 }
+
+/* ========== 검정 배경용 텍스트 색상 설정 ========== */
+
+/* 기본 색상 변수를 흰색으로 재정의 */
+:root {
+  --fg-color-1: #ffffff;
+  --fg-color-2: #e0e0e0;
+  --fg-color-3: #ffffff;
+  --fg-color-4: #cccccc;
+  --fg-color: #ffffff;
+}
+
+/* 모든 기본 텍스트를 흰색으로 설정 */
+.notion-text {
+  color: #ffffff !important;
+}
+
+/* 제목들을 흰색으로 설정 */
+.notion-h1,
+.notion-h2,
+.notion-h3,
+.notion-h4,
+.notion-h5,
+.notion-h6 {
+  color: #ffffff !important;
+}
+
+/* 컬렉션 카드 텍스트 */
+.notion-collection-card-size-small .notion-page-title-text,
+.notion-list-collection .notion-page-title-text,
+.notion-gallery-grid-size-large .notion-page-title-text {
+  color: #ffffff !important;
+}
+
+/* 갤러리 속성 텍스트 */
+.notion-gallery-grid-size-large .notion-property-date,
+.notion-gallery-grid-size-large .notion-property-text {
+  color: #e0e0e0 !important;
+}
+
+/* 콜아웃 텍스트 */
+.notion-default_co .notion-text {
+  color: #ffffff !important;
+}
+
+/* 리스트 텍스트 */
+.notion-list .notion-text {
+  color: #ffffff !important;
+}
+
+/* 일반 문단 텍스트 */
+p, div, span {
+  color: #ffffff !important;
+}
+
+/* 노란색 하이라이트 배경의 텍스트는 어두운 색 유지 */
+.notion-yellow_background {
+  color: #24231b !important; /* 어두운 브라운 색상 */
+}
+
+/* 노란색 텍스트 자체는 밝게 */
+.notion-yellow {
+  color: #ffeb3b !important;
+}
+
+/* ========== 네비게이션 드롭다운 완전 개선 ========== */
+
+/* 드롭다운 컨테이너 */
+.navbar-dropdown,
+.dropdown-menu {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px);
+  padding: 8px 0 !important;
+}
+
+/* 드롭다운 아이템 기본 스타일 */
+.navbar-dropdown .navbar-item,
+.dropdown-item {
+  color: #333333 !important;
+  padding: 12px 20px !important;
+  transition: all 0.2s ease !important;
+  border-radius: 6px !important;
+  margin: 4px 8px !important;
+  font-weight: 500 !important;
+}
+
+/* 드롭다운 아이템 호버 효과 */
+.navbar-dropdown .navbar-item:hover,
+.dropdown-item:hover {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  border-left: 3px solid var(--navbar-btn-bg-color) !important;
+  text-decoration: none !important;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .navbar-dropdown,
+  .dropdown-menu {
+    border-radius: 0 !important;
+    width: 100% !important;
+  }
+  
+  .navbar-dropdown .navbar-item,
+  .dropdown-item {
+    padding: 15px 20px !important;
+    font-size: 1.1rem !important;
+  }
+}
