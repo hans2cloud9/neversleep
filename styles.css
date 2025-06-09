@@ -4,17 +4,21 @@
   --navbar-height: 100px;
   --navbar-brand-logo-width: 100px;
   --container-width: 95%;
-  --navbar-fg-color: #000;
+  --navbar-fg-color: #ffffff;
   --navbar-btn-bg-color: #ffe100;
   --navbar-btn-fg-color: #24231b;
   --border-radius: 30px;
   --db-card-bg: transparent;
   
-  /* 색상 변수 */
-  --fg-color-h: 53;
-  --fg-color-s: 14%;
-  --fg-color-l: 12%;
+  /* 색상 변수 - 모두 흰색 계열로 설정 */
+  --fg-color-h: 0;
+  --fg-color-s: 0%;
+  --fg-color-l: 100%;
   --fg-color: hsl(var(--fg-color-h), var(--fg-color-s), var(--fg-color-l));
+  --fg-color-1: #ffffff;
+  --fg-color-2: #e0e0e0;
+  --fg-color-3: #ffffff;
+  --fg-color-4: #cccccc;
   
   /* 데이터베이스 카드 설정 */
   --db-card-shadow: 0;
