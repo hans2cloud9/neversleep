@@ -4,21 +4,17 @@
   --navbar-height: 100px;
   --navbar-brand-logo-width: 100px;
   --container-width: 95%;
-  --navbar-fg-color: #ffffff;
+  --navbar-fg-color: #000;
   --navbar-btn-bg-color: #ffe100;
   --navbar-btn-fg-color: #24231b;
   --border-radius: 30px;
   --db-card-bg: transparent;
   
-  /* 색상 변수 - 모두 흰색 계열로 설정 */
+  /* 색상 변수 - 본문 텍스트를 흰색으로 변경 */
   --fg-color-h: 0;
   --fg-color-s: 0%;
   --fg-color-l: 100%;
   --fg-color: hsl(var(--fg-color-h), var(--fg-color-s), var(--fg-color-l));
-  --fg-color-1: #ffffff;
-  --fg-color-2: #e0e0e0;
-  --fg-color-3: #ffffff;
-  --fg-color-4: #cccccc;
   
   /* 데이터베이스 카드 설정 */
   --db-card-shadow: 0;
@@ -48,9 +44,9 @@
   margin-top: 0 !important;
 }
 
-/* 텍스트 색상 설정 */
+/* 텍스트 색상 설정 - 흰색으로 변경 */
 .notion-text {
-  color: var(--fg-color-3) !important;
+  color: white !important;
 }
 
 /* 해시 링크 숨김 */
@@ -269,7 +265,7 @@ hr {
 }
 
 .notion-collection-card-size-small .notion-page-title-text {
-  color: var(--fg-color-3);
+  color: white; /* 제목도 흰색으로 변경 */
   text-align: center;
 }
 
@@ -297,7 +293,7 @@ hr {
 }
 
 .notion-list-collection .notion-page-title-text {
-  color: var(--fg-color-3);
+  color: white; /* 제목도 흰색으로 변경 */
 }
 
 .notion-list-collection .notion-page-link:hover {
@@ -351,7 +347,7 @@ hr {
 
 .notion-gallery-grid-size-large .notion-property-date,
 .notion-gallery-grid-size-large .notion-property-text {
-  color: var(--fg-color-3);
+  color: white; /* 속성 텍스트도 흰색으로 변경 */
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -406,252 +402,5 @@ hr {
   
   .navbar-item {
     padding: .5rem;
-  }
-}
-
-/* ========== 검정 배경용 텍스트 색상 설정 ========== */
-
-/* 기본 색상 변수를 흰색으로 재정의 */
-:root {
-  --fg-color-1: #ffffff;
-  --fg-color-2: #e0e0e0;
-  --fg-color-3: #ffffff;
-  --fg-color-4: #cccccc;
-  --fg-color: #ffffff;
-}
-
-/* 모든 기본 텍스트를 흰색으로 설정 */
-.notion-text {
-  color: #ffffff !important;
-}
-
-/* 제목들을 흰색으로 설정 */
-.notion-h1,
-.notion-h2,
-.notion-h3,
-.notion-h4,
-.notion-h5,
-.notion-h6 {
-  color: #ffffff !important;
-}
-
-/* 컬렉션 카드 텍스트 */
-.notion-collection-card-size-small .notion-page-title-text,
-.notion-list-collection .notion-page-title-text,
-.notion-gallery-grid-size-large .notion-page-title-text {
-  color: #ffffff !important;
-}
-
-/* 갤러리 속성 텍스트 */
-.notion-gallery-grid-size-large .notion-property-date,
-.notion-gallery-grid-size-large .notion-property-text {
-  color: #e0e0e0 !important;
-}
-
-/* 콜아웃 텍스트 */
-.notion-default_co .notion-text {
-  color: #ffffff !important;
-}
-
-/* 리스트 텍스트 */
-.notion-list .notion-text {
-  color: #ffffff !important;
-}
-
-/* 일반 문단 텍스트 */
-p, div, span {
-  color: #ffffff !important;
-}
-
-/* 노란색 하이라이트 배경의 텍스트는 어두운 색 유지 */
-.notion-yellow_background {
-  color: #24231b !important; /* 어두운 브라운 색상 */
-}
-
-/* 노란색 텍스트 자체는 밝게 */
-.notion-yellow {
-  color: #ffeb3b !important;
-}
-
-/* ========== 네비게이션 드롭다운 자연스러운 개선 ========== */
-
-/* 드롭다운 컨테이너 - 반투명 어두운 배경으로 변경 */
-.navbar-dropdown,
-.dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.9) !important; /* 반투명 검정 */
-  border: 1px solid #333333 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(10px);
-  padding: 8px 0 !important;
-}
-
-/* 드롭다운 아이템 기본 스타일 */
-.navbar-dropdown .navbar-item,
-.dropdown-item {
-  color: #ffffff !important; /* 흰색 텍스트 */
-  padding: 12px 20px !important;
-  transition: all 0.2s ease !important;
-  border-radius: 6px !important;
-  margin: 4px 8px !important;
-  font-weight: 500 !important;
-}
-
-/* 드롭다운 호버 - 그라데이션 파란색 */
-.navbar-dropdown .navbar-item:hover,
-.dropdown-item:hover {
-  background: linear-gradient(135deg, #167aff 0%, #0d5dd1 100%) !important;
-  color: #ffffff !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(22, 122, 255, 0.4) !important;
-  text-decoration: none !important;
-}
-
-/* 드롭다운 애니메이션 효과 */
-.navbar-dropdown,
-.dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  border: 1px solid #333333 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(10px);
-  padding: 8px 0 !important;
-  
-  /* 애니메이션 추가 */
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: dropdownFadeIn 0.2s ease forwards;
-}
-
-/* 드롭다운 페이드인 애니메이션 */
-@keyframes dropdownFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 모바일 최적화 */
-@media (max-width: 768px) {
-  .navbar-dropdown,
-  .dropdown-menu {
-    border-radius: 0 !important;
-    width: 100% !important;
-  }
-  
-  .navbar-dropdown .navbar-item,
-  .dropdown-item {
-    padding: 15px 20px !important;
-    font-size: 1.1rem !important;
-  }
-}
-
-/* ========== 가로 배치 콜아웃 간격 조정 ========== */
-
-/* 가로 배치된 콜아웃들의 좌우 간격 */
-.notion-row .notion-default_co {
-  margin-right: 20px !important; /* 오른쪽 여백 */
-  margin-left: 10px !important;  /* 왼쪽 여백 */
-}
-
-/* 첫 번째 콜아웃의 왼쪽 여백 제거 */
-.notion-row .notion-default_co:first-child {
-  margin-left: 0 !important;
-}
-
-/* 마지막 콜아웃의 오른쪽 여백 제거 */
-.notion-row .notion-default_co:last-child {
-  margin-right: 0 !important;
-}
-
-/* ========== 흰색 배경 콜아웃 완벽 최적화 ========== */
-
-/* 기본 콜아웃 스타일링 */
-.notion-default_co {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  border-radius: 16px !important;
-  padding: 24px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-/* 컬렉션 카드 스타일링 */
-.notion-collection-card-size-small {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  border-radius: 16px !important;
-  padding: 20px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(10px) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-
-.notion-collection-card-size-small:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* 흰색 배경 요소들의 텍스트 색상 */
-.notion-default_co,
-.notion-default_co *,
-.notion-collection-card-size-small,
-.notion-collection-card-size-small *,
-.notion-white_background,
-.notion-white_background *,
-.notion-gray_background,
-.notion-gray_background *,
-.notion-blue_background,
-.notion-blue_background * {
-  color: #2d3748 !important;
-}
-
-/* 제목 텍스트 (더 진한 색상) */
-.notion-default_co .notion-h1,
-.notion-default_co .notion-h2,
-.notion-default_co .notion-h3,
-.notion-collection-card-size-small .notion-page-title-text {
-  color: #1a202c !important;
-  font-weight: 600 !important;
-}
-
-/* 본문 텍스트 */
-.notion-default_co .notion-text,
-.notion-collection-card-size-small .notion-text {
-  color: #4a5568 !important;
-}
-
-/* 노란색 배경은 기존대로 유지 */
-.notion-yellow_background,
-.notion-yellow_background * {
-  color: #24231b !important;
-}
-
-/* ========== 초간단 폭 조절 ========== */
-
-/* 태블릿 */
-@media (max-width: 1024px) {
-  .notion-page-content {
-    max-width: 90% !important;
-  }
-}
-
-/* 모바일 */
-@media (max-width: 768px) {
-  .notion-page-content {
-    max-width: 95% !important;
-    padding: 0 15px !important;
-  }
-  
-  .notion-row .notion-default_co {
-    width: 100% !important;
-  }
-}
-
-/* 소형 모바일 */
-@media (max-width: 480px) {
-  .notion-page-content {
-    max-width: 100% !important;
-    padding: 0 10px !important;
   }
 }
