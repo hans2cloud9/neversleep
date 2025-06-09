@@ -626,3 +626,32 @@ p, div, span {
 .notion-yellow_background * {
   color: #24231b !important;
 }
+
+/* ========== 초간단 폭 조절 ========== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .notion-page-content {
+    max-width: 90% !important;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .notion-page-content {
+    max-width: 95% !important;
+    padding: 0 15px !important;
+  }
+  
+  .notion-row .notion-default_co {
+    width: 100% !important;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .notion-page-content {
+    max-width: 100% !important;
+    padding: 0 10px !important;
+  }
+}
